@@ -1,6 +1,6 @@
 const { RSA_X931_PADDING } = require('constants');
 const readline = require('readline');
-const questionare = ['Whats your name? Nicknames are also acceptable: ',
+const QUESTION = ['Whats your name? Nicknames are also acceptable: ',
   "Whats an activity you like doing? ",
   "What do you listen to while doing that? ",
   "Which meal is your favourite (eg: dinner, brunch, etc.) ",
@@ -18,34 +18,34 @@ const rl = readline.createInterface({
 
 
 
-rl.question(questionare[0], (answer) => {
+rl.question(QUESTION[0], (answer) => {
   const name = answer;
 
-  rl.question(questionare[1], (answer) => {
+  rl.question(QUESTION[1], (answer) => {
     const activity = answer;
 
-    rl.question(questionare[2], (answer) => {
+    rl.question(QUESTION[2], (answer) => {
       const music = answer;
 
-      rl.question(questionare[3], (answer) => {
+      rl.question(QUESTION[3], (answer) => {
         const meal = answer;
 
-        rl.question(questionare[4], (answer) => {
+        rl.question(QUESTION[4], (answer) => {
           const food = answer;
 
-          rl.question(questionare[5], (answer) => {
+          rl.question(QUESTION[5], (answer) => {
             const sport = answer;
 
-            rl.question(questionare[6], (answer) => {
+            rl.question(QUESTION[6], (answer) => {
               const superpower = answer;
               console.log(`\n--------------------------------------
-              \n${questionare[0]} - ${name}, 
-              \n ${questionare[1]} - ${activity}, 
-              \n ${questionare[2]} - ${music}, 
-              \n ${questionare[3]} - ${meal}, 
-              \n ${questionare[4]} - ${food} 
-              \n ${questionare[5]} - ${sport}, 
-              \n  ${questionare[6]} - ${superpower}`)
+              \n${QUESTION[0]} - ${name}, 
+              \n ${QUESTION[1]} - ${activity}, 
+              \n ${QUESTION[2]} - ${music}, 
+              \n ${QUESTION[3]} - ${meal}, 
+              \n ${QUESTION[4]} - ${food} 
+              \n ${QUESTION[5]} - ${sport}, 
+              \n  ${QUESTION[6]} - ${superpower}`)
               rl.close();
             })
           })
